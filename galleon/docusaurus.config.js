@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
+  title: 'Welcome',
+  tagline: 'to my Work Samples',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -37,11 +37,11 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Style Guide',
+              label: 'Product Guide Sample',
               to: 'docs/',
             },
             {
-              label: 'Second Doc',
+              label: 'API Sample',
               to: 'docs/doc2/',
             },
           ],
@@ -77,7 +77,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Galleon8, Inc. Built with Docusaurus.`,
     },
   },
   presets: [
