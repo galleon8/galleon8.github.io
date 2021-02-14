@@ -2,7 +2,7 @@ module.exports = {
   title: 'Welcome',
   tagline: 'to my Work Samples',
   url: 'https://galleon8.github.io',
-  baseUrl: '/docusaurus/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
