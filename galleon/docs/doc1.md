@@ -1,111 +1,135 @@
 ---
 id: doc1
-title: Kubernetes Adapter
-sidebar_label: Product Guide Sample
+title: HTTP Connector
+sidebar_label: Kelp Product Guide
 slug: /
 ---
 
-Kubernetes Adapter is a functional connection software layer providing the means to automate performing operations in a Kubernetes cluster. You don’t experience the adapter directly but rather use it as infrastructure for connecting TA instances with the applicable Kubernetes clusters.
+## Connector Overview
 
-Currently, the operations supported by the adapter come down to Job Creating and Command Running. Those operations you perform in the interface of TA web client.
+An HTTP connector is the building block that enables the communication of components by transferring data elements via the HTTP protocol.
 
-The Quick Start guide leads you through the sequence of basic configuration procedures you need to master in the web client to be able to perform the operations supported for Kubernetes:
+In this guide, you can find a full spec of HTTP connector [capabilities](#connector-capabilities) along with the info on how to incorporate those capabilities into your schema. Also, you can find info on the HTTP connector [settings](#connector-settings).
 
-* **Creating a Connection** — establishing a link between your instance and Kubernetes cluster.
-* **Creating a Job** — configuring a job to be performed in the Kubernetes cluster.
-* **Running a Command** — configuring a command to run in the Kubernetes cluster.
-* **Creating Objects** — configuring objects to be created in the Kubernetes cluster.
+Enjoy your ride.
+
+## Connector Capabilities
+
+The HTTP connector provides a complete set of standard capabilities implemented by means of input and output ports to tailor your RESTful application architecture to your custom needs.
+
+### Input Ports
+
+**url** `String`  
+The **url** port helps you connect to the resource you'd like to communicate with. All you have to do is enter the resource's URL. A URL shows the whole path to the resource as in the following example:
+
+```http
+http://request.example.com/path/to/info
+```
+
+A URL usually contains both the base path and the end path in it:
+
+  * The **base path** refers to the common path for the URL. In the example above, the base path is `http://request.example.com`.
+
+  * The **end path** refers to the particular place of the URL. In the example above, the end path is `/path/to/info`.
+
+Often enough, a URL's end path is to be added with *path parameters* and *query string parameters*. Those can be added as a JSON object via the **params** port.
+
+---
+
+**params** `JSON`  
+The **params** port helps you provide either *path parameters* or *query string parameters* to be passed with the URL to specify your request. As you can see from the example
+
+```http
+http://api.example.com/path/to/info/{infoId}?key1=value1&key2=value2
+```
+
+  * The **path parameters** are part of the URL's end path. Path parameters are usually set off with curly braces. In the example above, the path parameter is `{infoId}`.
+
+  * The **query string parameters** refer to the part of the URL after a question mark (`?`). In the query string, each parameter is listed one right after the other with an ampersand (`&`) separating them. In the example above, the query string parameters are `?key1=value1&key2=value2`.
+
+The way parameters are to be added into the URL depends on the **Path parameter processing** setting selected for the HTTP connector:
+
+  * **None**: Default. The parameters you'd like to pass with the endpoint are to be added as a query string to the URL indicated for the **url** port. To pass those parameters, incorporate a [**JSON const**](https://docs.kelp.app/data/components/constant/json/doc) component into your schema, specify those parameters as an array of `"key": "value"` pairs, and connect the component's **output** port to your HTTP connector's **params** input port.
+
+  * **Path parameters**: Select this option to add path parameters into the URL indicated for the **url** port. Double-check the path parameters naming and order in the URL settings. To pass those parameters, incorporate a [**JSON const**](https://docs.kelp.app/data/components/constant/json/doc) component into your schema, specify those parameters as an array of `"key": "value"` pairs, and connect the component's **output** port to your HTTP connector's **params** input port. Path parameters defined in the URL will be replaced by the actual values from the **JSON const** component.
+
+  * **Path RegExp**: Select this option to create a path specification that will be converted into a regular expression that matches conforming paths. In the URL settings, create a path specification using the [Path to RegExp](https://github.com/pillarjs/path-to-regexp#path-to-regexp) options. To pass parameter values for being processed by the specification created, incorporate a [**String const**](https://docs.kelp.app/data/components/constant/string/doc) component into your schema, specify those values, and connect the component's **output** port to your HTTP connector's **params** input port.
+
+---
+
+**data** `JSON, String`  
+The **data** port helps you send parameters as a *request body*. Request bodies are used with the POST, PUT, and PATCH requests only, so don't forget to select the corresponding **Request Method** in your HTTP connector settings. Request bodies are usually sent in JSON format. Therefore, incorporate a [**JSON const**](https://docs.kelp.app/data/components/constant/json/doc) component into your schema, specify request body parameters as an array of `"key": "value"` pairs, and connect the component's **output** port to your HTTP connector's **data** input port.
+
+---
+
+**headers** `JSON`  
+The **headers** port helps you send *header parameters*. Usually, those are the authorization parameters, such as API key, Basic Auth, etc. To pass header parameters, incorporate a [**JSON const**](https://docs.kelp.app/data/components/constant/json/doc) component into your schema, specify the necessary parameters as a `"key": "value"` pair, and connect the component's **output** port to your HTTP connector's **headers** input port.
+
+---
+
+**credentials** `JSON`  
+The **credentials** port helps you provide an identity confirmation for authentication into a secured connection. Various authentication schemes, including *OAuth 2.0* and *OIDC*, are supported by the **credentials** port. To pass your credentials, incorporate a [**Credentials**](https://docs.kelp.app/data/components/credentials/configuration/doc/) component into your schema, set the necessary parameters, and connect the component's **output** port to your HTTP connector's **credentials** port.
 
 :::note
-The configuration procedures below list only the steps pertinent to Kubernetes Adapter. Don’t be confused by the fact that some fields are left untouched and follow the procedures to the letter to get the declared results.
+As an additional safety measure, you can store your credentials in a secured vault, and refer to it in your apps.
 :::
+
 ---
-## Creating Objects in Kubernetes Cluster
 
-The latest adapter version supports adding the following objects: Config Map, Deployment, Persistent Volume Claim, Pod, Replica Set, and Service.
+**trigger** `Boolean`  
+The **trigger** port helps you add an event that will initiate your HTTP connector to perform the request configured. In other words, a trigger event starts an HTTP request. To use it, incorporate any trigger component into your schema (example: [**Card widget**](https://docs.kelp.app/widgets/icon/latest/doc)), and connect the component's **output** port to your HTTP connector's **trigger** port.
 
-The objects creation procedure has two parts: ***configuring job parameters*** and ***adding objects***. The first part is identical for all the objects supported, therefore it occupies first place in the procedure. The second part is different for various objects as those objects have different configurations.
+:::note
+If no **trigger** port is connected, then the HTTP connector performs the request upon an event on the **url** port.
+:::
 
-To create objects, follow these steps:
+---
 
-### Configuring Job Parameters
+**abort** `Boolean`  
+The **abort** port helps you terminate all pending requests. You add an event to the **abort** port, and that event terminates the requests that haven't been processed yet. To use it, incorporate any abort component into your schema (example: [**Card widget**](https://docs.kelp.app/widgets/icon/latest/doc)), and connect the component's **output** port to your HTTP connector's **abort** port.
 
-1. In the **Definitions** section of the **Navigation** pane, click **Jobs**.  
-The **Jobs** section appears in the **Objects** pane.
+---
 
-  ![](./assets/pictures/objects/jobs.png)
+### Output Ports
 
-2. In the **Jobs** section’s header, click **Add** ![](./assets/icons/add.png) > Kubernetes Adapter.  
-The **Kubernetes Job Definition** dialog appears.
+**response** `JSON`  
+The **response** port helps you receive a response to the data requested and processed through the input ports via the HTTP protocol. The response is represented as a JSON. To work with the response, incorporate any response output widgets of your choice (example: [**Log widget**](https://docs.kelp.app/widgets/log/doc)) into your schema, and connect the widget's **data** port to the HTTP connector's **response** port.
 
-  ![](./assets/pictures/objects/run-tab.png)
+---
 
-3. Enter the following fields to identify the job in your instance:
+**error** `JSON`  
+The error port helps you receive the error codes in response to the data requested and processed through the input ports via the HTTP protocol. Errors are represented as a JSON. To look through the error output, incorporate any response output widgets of your choice (example: [**Log widget**](https://docs.kelp.app/widgets/log/doc)) into your schema, and connect the widget's **data** port to the HTTP connector's **error** port.
 
-    * **Kubernetes Job Name**: arbitrary alphanumeric characters (max. length: 1000).
-    * **Owner**: a user having the right to edit the job created.
-    * **Parent Group**: members of the parent group selected are enabled with the right to edit the job created.
+---
 
-4. On the **Run** tab in the **Agent/Adapter Name** drop-down list, select the connection you’ve created.
+## Connector Settings
 
-  ![](./assets/pictures/objects/agent-adapter-name.png)
+**Path parameter processing**  
+Select how you'd like to process parameters of the URL.
 
-5. On the **Kubernetes Job** tab in the **Job Type** drop-down list, select **Kubernetes Objects**.
+| Processing Option | Description |
+| ----------------- | :----------- |
+| **None** | Default. Adds parameters as a *query string* to the URL indicated for the **url** port. |
+| **Path parameters** | Adds *path parameters* into the URL indicated for the **url** port. |
+| **Path RegExp** | Creates a path specification that will be converted into a regular expression that matches conforming paths. Use the [Path to RegExp](https://github.com/pillarjs/path-to-regexp#path-to-regexp) options to create a specification. |
 
-  ![](./assets/pictures/objects/objects-dropdown.png)
+**Request method**  
+The method defines the allowed operation with the resource. The HTTP connector supports the following methods:
 
-6. On the **Kubernetes Objects** tab, decide on both the way of the job run and the job steps execution mechanism to use:
+  * **GET**: Retrieves a resource.
+  * **POST**: Creates a resource.
+  * **PUT**: Updates or creates within an existing resource.
+  * **PATCH**: Partially modifies an existing resource.
+  * **DELETE**: Removes the resource.
 
-    * **Dry Run**: select the checkbox if you intend the configured job to be only validated when scheduled or leave it empty if you intend the actual job run to be performed when scheduled.
-    * **Wait for operations to complete**: select the checkbox to complete the job steps one by one; leave the checkbox empty to complete the job steps in parallel.
+**Response data type**  
+Specifies the type of data to be received in response (not applicable to the HEAD method). The corresponding header parameters will be added to the HTTP request automatically. `JSON` is the default data type.
 
-7.	On the **Steps** tab, enter the namespace for objects creation:
+**Timeout**  
+Specifies the duration of time (in milliseconds) in which the request terminates. By default, timeout is disabled (set to `0`).
 
-    * **Fetch** ![](./assets/icons/fetch.png) (required): loads all the namespaces from the Kubernetes cluster into the **Namespaces** drop-down list.
-    * **Namespace** (required): in the drop-down list, select a namespace to create objects at.
+**Ignore active state**  
+Defines whether the HTTP connector waits for an event to trigger the request:
 
-    ![](./assets/pictures/objects/namespace.png)
-
-8.	Fill out the **Job Steps** table. The table serves as a configuration file according to which the objects will be created in your Kubernetes cluster upon the job completion. In simple words, each job step is an object you’d like to create in your Kubernetes cluster: Config Map, Deployment, Persistent Volume Claim, Pod, Replica Set, and Service.
-
-9.	Click the step line in the **Job Steps** table and move it with the arrows to establish the proper sequence of the steps you added.
-
-### Adding Persistent Volume Claim (PVC)
-
-1. In the **Job Steps** table, click **Add** to open the **Add Job Step** dialog.
-
-  ![](./assets/pictures/objects/add.png)
-
-2. On the **General** tab of the **Add Job Step** dialog, fill in the general parameters of the step you’re adding:
-
-    * **Step Name** (required): any alphanumeric characters to identify your step.
-    *	**Kind**: in the drop-down list, select **PersistentVolumeClaim**.
-    *	**Operation Type**: select Create as the operation to be performed for your object.
-
-  ![](./assets/pictures/objects/pvc.png)
-
-3. On the **General** tab of the **Persistent Volume Claim** tab, configure the parameters of the object you’re going to add:
-
-    * **Name** (required): any alphanumeric characters to identify your object.
-    * **Storage Class**: the field is disabled by default; to request a particular class of storage, enable the field (select **On**) and specify the name of a Storage Class. Otherwise default class will be set.
-    * **Volume Name**: any alphanumeric characters to uniquely identify your volume.
-    * **Volume Mode**: select the applicable Volume Mode (`Filesystem` or `Block`); note that Filesystem is the default mode used when the **Volume Mode** parameter is omitted.
-    * **Access Mode**: select the access modes your Persistent Volume to support; note that the field is a multiple choice one, and the access modes selected will be placed into the box below where you can manage those selections (Delete/Clear).
-
-  ![](./assets/pictures/objects/add-pvc.png)
-
-4. On the **Resources** tab of the **Persistent Volume Claim** tab, specify your resource types and quantities as `key-value` pairs:
-
-    * **Requests**: `key` is the type of resource and `value` is the amount of the resource being requested.
-    * **Limits**: `key` is the type of resource and `value` is the maximum amount of the resource that will be made available.
-
-5. On the **Selector** tab of the **Persistent Volume Claim** tab, specify the selector to further filter the set of volumes. The selector can consist of two fields:
-
-    * **Match Labels**: the volume must have a label with this value; add a map of key-value pairs.
-    * **Match Expressions**: a list of requirements made by specifying key, list of values, and operator that relates the key and values. Valid operators include `In`, `NotIn`, `Exists`, `DoesNotExist`.
-
-    All of the requirements, from both Match Labels and Match Expressions, are ANDed together — they must all be satisfied in order to match.
-
-6. Check all the object parameters set on the **Persistent Volume Claim** tab by switching to the **YAML** tab that shows the YAML configuration file for this object, and then click **OK** to add the configured Job Step.
-
-  ![](./assets/pictures/objects/add-pvc-yaml.png)
+  * **Yes**: The request is to be sent despite an event.
+  * **No**: The request is to be initiated by an event only.

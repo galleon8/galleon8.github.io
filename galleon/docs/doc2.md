@@ -1,164 +1,110 @@
 ---
 id: doc2
-title: Comparison Controller
-sidebar_label: API Sample
+title: Kubernetes Adapter
+sidebar_label: Product Guide Sample
 ---
 
-Compare two entries or sources.
+Kubernetes Adapter is a functional connection software layer providing the means to automate performing operations in a Kubernetes cluster. You don’t experience the adapter directly but rather use it as infrastructure for connecting TA instances with the applicable Kubernetes clusters.
 
-### `Compare Sources`
+Currently, the operations supported by the adapter come down to Job Creating and Command Running. Those operations you perform in the interface of TA web client.
 
-**POST /api/v1/compare/entries**  
-Compare two sources against each other on the basis of the objects they contain.
+The Quick Start guide leads you through the sequence of basic configuration procedures you need to master in the web client to be able to perform the operations supported for Kubernetes:
 
-#### Request Body Parameters
+* **Creating a Connection** — establishing a link between your instance and Kubernetes cluster.
+* **Creating a Job** — configuring a job to be performed in the Kubernetes cluster.
+* **Running a Command** — configuring a command to run in the Kubernetes cluster.
+* **Creating Objects** — configuring objects to be created in the Kubernetes cluster.
 
-| Comparison Objects | Parameters | Type | Example |
-| --- | --- | --- | --- |
-| firstObject, secondObject | `entityType` | string | `Jobs`, `Calendars`, `Resources`, `Events`, `Variables`, `Jobclasses`, `Actions`, `Businessview`, `Tags`, `Agentlists`, `Fiscalcalendars`, `Timezones` |
-|  | `sourceID` | int64 | `7` |
-|  | `sourceType` | string | `Connection`, `Repository` |
-|  | `versionId` | int64 | `5` |
-
-#### Query Parameters
-
-| Name | Description | Type |
-| --- | --- | --- |
-| `page` | Retrieves an indicated page (0..N). Default: `0` | int32 |
-| `size` | A number of records per page. Default: `20` | int32 |
-| `sort` | Sorting criteria. Format: `field,ACS/DESC` | string |
-
-#### Request Example
-
-```curl
-curl -X POST "http://172.21.240.126:8082/api/v1/compare/sources" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"firstObject\": { \"entityType\": \"JOBS\", \"sourceId\": 0, \"sourceType\": \"CONNECTION\", \"versionId\": 0 }, \"secondObject\": { \"entityType\": \"JOBS\", \"sourceId\": 0, \"sourceType\": \"CONNECTION\", \"versionId\": 0 }}"
-```
-#### Response Example
-
-```json
-{
-  "difference": [
-    {
-      "changed": true,
-      "leftId": 0,
-      "leftValue": "string",
-      "rightId": 0,
-      "rightValue": "string"
-    }
-  ],
-  "firstObject": {
-    "entityType": "JOBS",
-    "sourceId": 0,
-    "sourceType": "CONNECTION",
-    "versionId": 0
-  },
-  "secondObject": {
-    "entityType": "JOBS",
-    "sourceId": 0,
-    "sourceType": "CONNECTION",
-    "versionId": 0
-  }
-}
-```
+:::note
+The configuration procedures below list only the steps pertinent to Kubernetes Adapter. Don’t be confused by the fact that some fields are left untouched and follow the procedures to the letter to get the declared results.
+:::
 ---
-# Connection Controller
+## Creating Objects in Kubernetes Cluster
 
-Manage operations with connections.
+The latest adapter version supports adding the following objects: Config Map, Deployment, Persistent Volume Claim, Pod, Replica Set, and Service.
 
-### `Get Connections`
+The objects creation procedure has two parts: ***configuring job parameters*** and ***adding objects***. The first part is identical for all the objects supported, therefore it occupies first place in the procedure. The second part is different for various objects as those objects have different configurations.
 
-**GET /api/v1/connections**  
-Get a list of available connections.
+To create objects, follow these steps:
 
-#### Query Parameters
+### Configuring Job Parameters
 
-| Name | Description | Type |
-| --- | --- | --- |
-| `page` | Retrieves an indicated page (0..N). Default: `0` | int32 |
-| `size` | A number of records per page. Default: `20` | int32 |
-| `sort` | Sorting criteria. Format: `field,ACS/DESC` | string |
+1. In the **Definitions** section of the **Navigation** pane, click **Jobs**.  
+The **Jobs** section appears in the **Objects** pane.
 
-#### Request Example
+  ![](./assets/pictures/objects/jobs.png)
 
-```curl
-curl -X GET "http://172.21.240.126:8082/api/v1/connections?page=0&size=20&sort=id%2CASC" -H "accept: */*"
-```
+2. In the **Jobs** section’s header, click **Add** ![](./assets/icons/add.png) > **Kubernetes Adapter**.  
+The **Kubernetes Job Definition** dialog appears.
 
-#### Response Example
+  ![](./assets/pictures/objects/run-tab.png)
 
-```json
-[
-  {
-    "access": 0,
-    "createBy": {
-      "id": 0,
-      "name": "string",
-      "surname": "string",
-      "username": "string"
-    },
-    "createTs": 0,
-    "description": "string",
-    "id": 0,
-    "lastRefresh": 0,
-    "name": "string",
-    "state": "CREATING",
-    "type": "LIVE",
-    "updateBy": {
-      "id": 0,
-      "name": "string",
-      "surname": "string",
-      "username": "string"
-    },
-    "updateTs": 0
-  }
-]
-```
----
-# Entries Controller
+3. Enter the following fields to identify the job in your instance:
 
-Manage operations with entries.
+    * **Kubernetes Job Name**: arbitrary alphanumeric characters (max. length: 1000).
+    * **Owner**: a user having the right to edit the job created.
+    * **Parent Group**: members of the parent group selected are enabled with the right to edit the job created.
 
-### `Get Entries by Repo and Filter`
+4. On the **Run** tab in the **Agent/Adapter Name** drop-down list, select the connection you’ve created.
 
-**GET /api/v1/entries/repository/{id}/{versionId}/{type}/filter**  
-Get information on the entries specified by repository ID, repository version ID, and entry type. Filter the results, using the regular expressions search.
+  ![](./assets/pictures/objects/agent-adapter-name.png)
 
-#### Path Parameters
+5. On the **Kubernetes Job** tab in the **Job Type** drop-down list, select **Kubernetes Objects**.
 
-| Name | Description | Type |
-| --- | --- | --- |
-| `id` | Repository ID | int64 |
-| `versionId` | Version ID | int64 |
-| `type` | Available type values: `Jobs`, `Calendars`, `Resources`, `Events`, `Variables`, `Jobclasses`, `Actions`, `Tags`, `Agentlists`, `Timezones` | string |
+  ![](./assets/pictures/objects/objects-dropdown.png)
 
-#### Query Parameters
+6. On the **Kubernetes Objects** tab, decide on both the way of the job run and the job steps execution mechanism to use:
 
-| Name | Description | Type |
-| --- | --- | --- |
-| `filter` | Regular expressions search | string |
-| `page` | Retrieves an indicated page (0..N). Default: `0` | int32 |
-| `size` | A number of records per page. Default: `20` | int32 |
-| `sort` | Sorting criteria. Format: `field,ACS/DESC` | string |
+    * **Dry Run**: select the checkbox if you intend the configured job to be only validated when scheduled or leave it empty if you intend the actual job run to be performed when scheduled.
+    * **Wait for operations to complete**: select the checkbox to complete the job steps one by one; leave the checkbox empty to complete the job steps in parallel.
 
-#### Request Example
+7.	On the **Steps** tab, enter the namespace for objects creation:
 
-```curl
-curl -X GET "http://172.21.244.158:8082/api/v1/entries/repository/3/5/JOBS/filter?page=0&size=20&sort=id%2CASC" -H "accept: */*"
-```
+    * **Fetch** ![](./assets/icons/fetch.png) (required): loads all the namespaces from the Kubernetes cluster into the **Namespaces** drop-down list.
+    * **Namespace** (required): in the drop-down list, select a namespace to create objects at.
 
-#### Response Example
+    ![](./assets/pictures/objects/namespace.png)
 
-```json
-[
-  {
-    "description": "string",
-    "fullName": "string",
-    "id": 0,
-    "name": "string",
-    "parent": true,
-    "parentId": 0,
-    "parentName": "string",
-    "type": "string"
-  }
-]
-```
+8.	Fill out the **Job Steps** table. The table serves as a configuration file according to which the objects will be created in your Kubernetes cluster upon the job completion. In simple words, each job step is an object you’d like to create in your Kubernetes cluster: Config Map, Deployment, Persistent Volume Claim, Pod, Replica Set, and Service.
+
+9.	Click the step line in the **Job Steps** table and move it with the arrows to establish the proper sequence of the steps you added.
+
+### Adding Persistent Volume Claim (PVC)
+
+1. In the **Job Steps** table, click **Add** to open the **Add Job Step** dialog.
+
+  ![](./assets/pictures/objects/add.png)
+
+2. On the **General** tab of the **Add Job Step** dialog, fill in the general parameters of the step you’re adding:
+
+    * **Step Name** (required): any alphanumeric characters to identify your step.
+    *	**Kind**: in the drop-down list, select **PersistentVolumeClaim**.
+    *	**Operation Type**: select **Create** as the operation to be performed for your object.
+
+  ![](./assets/pictures/objects/pvc.png)
+
+3. On the **General** tab of the **Persistent Volume Claim** tab, configure the parameters of the object you’re going to add:
+
+    * **Name** (required): any alphanumeric characters to identify your object.
+    * **Storage Class**: the field is disabled by default; to request a particular class of storage, enable the field (select **On**) and specify the name of a Storage Class. Otherwise default class will be set.
+    * **Volume Name**: any alphanumeric characters to uniquely identify your volume.
+    * **Volume Mode**: select the applicable Volume Mode (`Filesystem` or `Block`); note that Filesystem is the default mode used when the **Volume Mode** parameter is omitted.
+    * **Access Mode**: select the access modes your Persistent Volume to support; note that the field is a multiple choice one, and the access modes selected will be placed into the box below where you can manage those selections (Delete/Clear).
+
+  ![](./assets/pictures/objects/add-pvc.png)
+
+4. On the **Resources** tab of the **Persistent Volume Claim** tab, specify your resource types and quantities as `key-value` pairs:
+
+    * **Requests**: `key` is the type of resource and `value` is the amount of the resource being requested.
+    * **Limits**: `key` is the type of resource and `value` is the maximum amount of the resource that will be made available.
+
+5. On the **Selector** tab of the **Persistent Volume Claim** tab, specify the selector to further filter the set of volumes. The selector can consist of two fields:
+
+    * **Match Labels**: the volume must have a label with this value; add a map of key-value pairs.
+    * **Match Expressions**: a list of requirements made by specifying key, list of values, and operator that relates the key and values. Valid operators include `In`, `NotIn`, `Exists`, `DoesNotExist`.
+
+    All of the requirements, from both Match Labels and Match Expressions, are ANDed together — they must all be satisfied in order to match.
+
+6. Check all the object parameters set on the **Persistent Volume Claim** tab by switching to the **YAML** tab that shows the YAML configuration file for this object, and then click **OK** to add the configured Job Step.
+
+  ![](./assets/pictures/objects/add-pvc-yaml.png)
