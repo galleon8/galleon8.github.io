@@ -38,7 +38,7 @@ module.exports = {
           items: [
             {
               label: 'Kelp Product Guide',
-              to: 'docs/doc1/',
+              to: 'docs/',
             },
             {
               label: 'Product Guide Sample',

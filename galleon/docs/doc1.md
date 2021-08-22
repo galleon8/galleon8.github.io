@@ -9,6 +9,8 @@ slug: /
 
 An HTTP connector is the building block that enables the communication of components by transferring data elements via the HTTP protocol.
 
+![](./assets/pictures/objects/http-connector.svg)
+
 In this guide, you can find a full spec of HTTP connector [capabilities](#connector-capabilities) along with the info on how to incorporate those capabilities into your schema. Also, you can find info on the HTTP connector [settings](#connector-settings).
 
 Enjoy your ride.
