@@ -48,6 +48,10 @@ module.exports = {
               label: 'API Sample',
               to: 'docs/doc3/',
             },
+            {
+              label: 'Phones Storer',
+              to: 'docs/doc4/',
+            },
           ],
         },
         {
