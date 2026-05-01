@@ -1,0 +1,104 @@
+:root {
+  /* Keep visual overrides centralized so a future theme toggle has one obvious home. */
+  --site-content-max-width: 860px;
+  --theme-swatch-mode: #1a170f;
+  --theme-swatch-accent: #eec35e;
+}
+
+html[data-theme="dark-blue"] {
+  --background: #0e1923;
+  --foreground: #d6e8ee;
+  --accent: #5accf0;
+  --theme-swatch-mode: #0e1923;
+  --theme-swatch-accent: #5accf0;
+  color-scheme: dark;
+}
+
+html[data-theme="light-paper-green"] {
+  --background: #fff4f2;
+  --foreground: #424140;
+  --accent: #008000;
+  --theme-swatch-mode: #fff4f2;
+  --theme-swatch-accent: #008000;
+  color-scheme: light;
+}
+
+html[data-theme="light-paper-purple"] {
+  --background: #fff5eb;
+  --foreground: #45372b;
+  --accent: #990bda;
+  --theme-swatch-mode: #fff5eb;
+  --theme-swatch-accent: #990bda;
+  color-scheme: light;
+}
+
+.container {
+  max-width: var(--site-content-max-width);
+}
+
+.post > .post-title {
+  font-size: calc(var(--font-size) * 1.85);
+  line-height: 1.25;
+}
+
+.site-footer__copy {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: center;
+}
+
+.theme-picker {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.theme-picker__label {
+  color: var(--accent);
+}
+
+.theme-picker__item {
+  margin-left: auto;
+}
+
+.theme-picker__button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  height: 20px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+}
+
+.theme-picker__button:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.theme-picker__swatch {
+  background: linear-gradient(
+    to right,
+    var(--theme-swatch-mode) 0 50%,
+    var(--theme-swatch-accent) 50% 100%
+  );
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  display: block;
+  height: 16px;
+  width: 16px;
+}
+
+.menu__dropdown .theme-picker {
+  gap: 8px;
+  padding: 5px;
+}
+
+.menu__dropdown .theme-picker__item {
+  margin-left: 0;
+}

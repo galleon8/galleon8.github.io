@@ -1,0 +1,15 @@
+<script>
+  (function () {
+    try {
+      var theme = window.localStorage.getItem("g8-blog-theme");
+      var validThemes = ["dark-blue", "light-paper-green", "light-paper-purple"];
+
+      if (validThemes.indexOf(theme) !== -1) {
+        document.documentElement.setAttribute("data-theme", theme);
+      }
+    } catch (error) {
+      // Keep the default Terminal theme if storage is unavailable.
+    }
+  })();
+</script>
+<script defer src="{{ "js/theme-picker.js" | relURL }}"></script>
