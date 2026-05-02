@@ -2,10 +2,10 @@
   var storageKey = "g8-blog-theme";
   var themes = ["default", "dark-blue", "light-paper-green", "light-paper-purple"];
   var themeNames = {
-    "default": "Dark & Yellow",
-    "dark-blue": "Dark & Blue",
-    "light-paper-green": "Light & Green",
-    "light-paper-purple": "Light & Purple"
+    "default": "dark & yellow",
+    "dark-blue": "dark & blue",
+    "light-paper-green": "light & green",
+    "light-paper-purple": "light & purple"
   };
 
   function normalizeTheme(theme) {

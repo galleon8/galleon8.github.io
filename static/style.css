@@ -41,6 +41,43 @@ html[data-theme="light-paper-purple"] {
   line-height: 1.25;
 }
 
+.post .post-content ul {
+  list-style: none;
+  padding-left: 1.6rem;
+}
+
+.post .post-content ul ul {
+  margin: 0.45rem 0;
+  padding-left: 1.35rem;
+}
+
+.post .post-content ul li {
+  position: relative;
+}
+
+.post .post-content ul li:not(:empty)::before {
+  color: var(--accent);
+  content: "●";
+  font-size: 0.78em;
+  left: -1.3rem;
+  line-height: var(--line-height);
+  position: absolute;
+}
+
+.post .post-content ul ul li:not(:empty)::before {
+  content: "○";
+}
+
+.post .post-content ul ul ul li:not(:empty)::before {
+  content: "◆";
+  font-size: 0.72em;
+}
+
+.post .post-content ul ul ul ul li:not(:empty)::before {
+  content: "○";
+  font-size: 0.74em;
+}
+
 .site-footer__copy {
   align-items: center;
   display: flex;
