@@ -61,7 +61,7 @@ enableRobotsTXT = true
 
   [[menu.main]]
     identifier = "linkedin"
-    name = "LinkedIn"
+    name = "LinkedIn↗"
     url = "https://www.linkedin.com/in/gene-danilov/"
     weight = 40
 

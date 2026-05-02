@@ -63,6 +63,12 @@ html[data-theme="light-paper-purple"] {
   margin-left: auto;
 }
 
+.navigation-menu__inner > li:not(.theme-picker__item) > a:hover,
+.menu__dropdown > li:not(.theme-picker__item) > a:hover {
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  text-decoration: none;
+}
+
 .theme-picker__button {
   align-items: center;
   background: transparent;
