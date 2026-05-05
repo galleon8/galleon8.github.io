@@ -20,12 +20,14 @@ Git, GitHub, Markdown, static site generators (Hugo, MkDocs, Docusaurus, Nextra,
 
 ## Experience
 
-- **Ankr**: Blockchain/Web3/DeFi; three main products — from ground zero to top performing docs; Developer Experience, Content Strategy, Information Architecture; API/SDK/Webhooks docs, developer docs, end-user docs, UX copy, website content, whitepapers, litepapers, feature announcement emails, product positioning/messaging.
+- **Ankr** (2022-2026): Blockchain/Web3/DeFi; three main products — from ground zero to top performing docs; Developer Experience, Content Strategy, Information Architecture; API/SDK/Webhooks docs, developer docs, end-user docs, UX copy, website content, whitepapers, litepapers, feature announcement emails, product positioning/messaging.
 
-- **MoneyHero Group**: Fintech; Information Architecture; internal documentation: architecture docs, developer docs, dataflow docs, API docs.
+- **MoneyHero Group** (2021-2022): Fintech; Information Architecture; internal documentation: architecture docs, developer docs, dataflow docs, API docs.
 
-- **Forte Group**: Process automation solutions, Kubernetes; Developer Experience, Content Strategy, Information Architecture; API docs, CLI docs, end-user docs, release notes.
+- **Forte Group** (2020-2021): Process automation solutions, Kubernetes; Developer Experience, Content Strategy, Information Architecture; API docs, CLI docs, end-user docs, release notes.
 
-- **Wargaming**: Game development and publishing; Developer Experience, Content Strategy, Information Architecture; internal documentation: API docs, developer docs, end-user docs.
+- **Wargaming** (2018-2019): Game development and publishing; Developer Experience, Content Strategy, Information Architecture; internal documentation: API docs, developer docs, end-user docs.
 
-- **Gurtam**: Telematics / GPS Tracking / Fleet Management; Developer Experience, Content Strategy, Information Architecture; end-user docs, release notes, UX copy across 20+ products.
+- **Gurtam** (2013-2017): Telematics / GPS Tracking / Fleet Management; Developer Experience, Content Strategy, Information Architecture; end-user docs, release notes, UX copy across 20+ products.
+
+> **Download PDF**: [Gene-CV↗](link)
