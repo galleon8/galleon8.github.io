@@ -6,6 +6,8 @@ hideReadingTime = true
 
 ## Summary
 
+> **Download PDF**: [Gene-CV↗](link)
+
 Over 10 years in Technical Writing. Hands-on across Developer Experience, Content Strategy, and Information Architecture. Gravitate toward Docs-as-Code tools and AI-augmented workflows. Specialize in API and developer docs, end-user docs, UX copy, website content, LLM- and Agent-ready docs, visual communication through diagrams and screenshots.
 
 Operate best in environments that enable meaningful, strategic, product-aligned work. Believe in the freedom to shape and own the docs end-to-end: exploring product features hands-on, aligning with Product and Engineering teams, communicating complex systems with clarity and precision, and ensuring high-quality deliverables.
