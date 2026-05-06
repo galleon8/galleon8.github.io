@@ -16,7 +16,7 @@ A decade-long tech writing journey. Spark and curiosity. Hands-on across Develop
 
 Care for UX, both in docs and product interfaces. Spend endless hours with Design teams, advocating for straightforward logic and simplifying user interaction with complex systems.
 
-Set foot into aspects of the Tech Product Marketing Manager role, bringing insights into product vision to the Marketing team, grounded in deep understanding and articulated as clear product positioning and messaging. Craft feature announcement email send-outs communicating the essence of scheduled product releases to customers.
+Set foot into aspects of the Tech Product Marketing Manager role. Help align the Marketing team around the broader product vision, grounded in deep technical understanding and translated into clear product positioning and messaging. Craft feature announcement email send-outs communicating the essence of scheduled product releases to customers.
 
 ---
 
