@@ -4,7 +4,7 @@ description = "Resume and professional background."
 hideReadingTime = true
 +++
 
-> **Download PDF**: [Gene-CV↗](link)
+> **Download PDF**: [Gene-CV↗](/files/gene-cv.pdf)
 
 ## Roads I Roam
 
@@ -46,4 +46,4 @@ Git, GitHub, Markdown, static site generators (Hugo, MkDocs, Docusaurus, Nextra,
 
 - **Gurtam** (2013-2017): Telematics / GPS Tracking / Fleet Management; Developer Experience, Content Strategy, Information Architecture; end-user docs, release notes, UX copy across 20+ products.
 
-> **Download PDF**: [Gene-CV↗](link)
+> **Download PDF**: [Gene-CV↗](/files/gene-cv.pdf)

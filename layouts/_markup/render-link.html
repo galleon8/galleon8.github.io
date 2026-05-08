@@ -1,0 +1,11 @@
+{{- $destination := .Destination -}}
+{{- $href := $destination -}}
+{{- $isFragment := strings.HasPrefix $destination "#" -}}
+{{- $isRemote := or (strings.HasPrefix $destination "http://") (strings.HasPrefix $destination "https://") -}}
+{{- $isSpecial := or (strings.HasPrefix $destination "mailto:") (strings.HasPrefix $destination "tel:") -}}
+{{- $path := urls.Parse $destination -}}
+{{- $isPDF := strings.HasSuffix (lower $path.Path) ".pdf" -}}
+{{- if not (or $isFragment $isRemote $isSpecial) -}}
+  {{- $href = strings.TrimPrefix "/" $destination | relURL -}}
+{{- end -}}
+<a href="{{ $href | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $isPDF }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Text | safeHTML }}</a>
