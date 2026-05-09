@@ -6,13 +6,15 @@ hideReadingTime = true
 
 > **Download PDF**: [Gene-CV↗](/files/gene-cv.pdf)
 
-## Roads I Roam
+## The Journey
 
 A decade-long tech writing journey. Spark and curiosity. Hands-on across Developer Experience, Content Strategy, and Information Architecture. Gravitate toward Docs-as-Code tools and AI-augmented workflows. Specialize in API and developer docs, end-user docs, UX copy, website content, LLM- and Agent-ready docs, visual communication through diagrams and screenshots.
 
 > **Industry expertise**: Blockchain / Web3 / DeFi, Fintech, Process Automation Solutions, Gaming/Publishing, and Telematics / GPS Fleet Management.
 
 ![About photo](/images/mosaic.jpg)
+
+## Beyond Docs
 
 Care for UX, both in docs and product interfaces. Spend endless hours with Design teams, advocating for straightforward logic and simplifying user interaction with complex systems.
 
@@ -26,6 +28,8 @@ Operate best in environments that enable meaningful, strategic, product-aligned 
 
 Among the first to raise questions and initiate constructive discussions when something feels off about the product. Easy to embed into Agile workflows across distributed teams with asynchronous communication. Curious, methodical, precise, diplomatic, and easy-going. Enjoy being around folks who love what they do.
 
+On the other side of computer, I do sports, ride motorcycles, and enjoy the outdoors.
+
 ---
 
 ## Tech and Tools
@@ -36,7 +40,7 @@ Git, GitHub, Markdown, static site generators (Hugo, MkDocs, Docusaurus, Nextra,
 
 ## Experience
 
-- **Ankr** (2022-2026): Blockchain/Web3/DeFi; three main products — from ground zero to top performing docs; Developer Experience, Content Strategy, Information Architecture; API/SDK/Webhooks docs, developer docs, end-user docs, UX copy, website content, whitepapers, litepapers, feature announcement emails, product positioning/messaging.
+- **Ankr** (2022-2026): Blockchain/Web3/DeFi; three main products — from ground zero to top performing docs; Developer Experience, Content Strategy, Information Architecture; API/SDK/Webhook docs, developer docs, end-user docs, UX copy, website content, whitepapers, litepapers, feature announcement emails, product positioning/messaging.
 
 - **MoneyHero Group** (2021-2022): Fintech; Information Architecture; internal documentation: architecture docs, developer docs, dataflow docs, API docs.
 
