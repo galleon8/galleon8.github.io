@@ -28,8 +28,6 @@ Operate best in environments that enable meaningful, strategic, product-aligned 
 
 Among the first to raise questions and initiate constructive discussions when something feels off about the product. Easy to embed into Agile workflows across distributed teams with asynchronous communication. Curious, methodical, precise, diplomatic, and easy-going. Enjoy being around folks who love what they do.
 
-On the other side of computer, I do sports, ride motorcycles, and enjoy the outdoors.
-
 ---
 
 ## Tech and Tools

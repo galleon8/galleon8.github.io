@@ -41,25 +41,54 @@ html[data-theme="light-paper-purple"] {
   line-height: 1.25;
 }
 
-.post .post-content ul {
-  list-style: none;
-  padding-left: 0.85rem;
+.post .post-content {
+  --content-list-marker-align: -0.7ch;
+  --content-list-marker-gap: 3ch;
+  --content-list-nested-offset: 0;
 }
 
-.post .post-content ul ul {
-  margin: 0.45rem 0;
-  padding-left: 1.35rem;
+.post .post-content ul {
+  list-style: none;
+  margin-left: 4ch;
+  padding-left: 0;
+}
+
+.post .post-content :is(ul, ol) :is(ul, ol) {
+  margin-bottom: 0.45rem;
+  margin-left: var(--content-list-nested-offset);
+  margin-top: 0.6rem;
+  padding-left: var(--content-list-marker-gap);
 }
 
 .post .post-content ul li {
   position: relative;
 }
 
+.post .post-content li > p:first-child {
+  margin-top: 0;
+}
+
+.post .post-content li > p:last-child {
+  margin-bottom: 0;
+}
+
+.post .post-content li > p + p {
+  margin-top: 0.75rem;
+}
+
+.post .post-content li > p:has(+ :is(ul, ol)) {
+  margin-bottom: 0.15rem;
+}
+
+.post .post-content :is(ul, ol) > li:has(> p) + li:has(> p) {
+  margin-top: 0.75rem;
+}
+
 .post .post-content ul li:not(:empty)::before {
   color: var(--accent);
   content: "●";
   font-size: 0.78em;
-  left: -1.35rem;
+  left: calc(-1 * var(--content-list-marker-gap) + var(--content-list-marker-align));
   line-height: var(--line-height);
   position: absolute;
 }
@@ -75,7 +104,7 @@ html[data-theme="light-paper-purple"] {
 
 .post .post-content ul ul ul ul li:not(:empty)::before {
   content: "○";
-  font-size: 0.74em;
+  font-size: 0.72em;
 }
 
 .post .post-content blockquote {
