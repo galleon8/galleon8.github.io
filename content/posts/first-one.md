@@ -16,7 +16,7 @@ Like with all the things I do, I started enthusiastically. I excelled in transla
 
 I performed with the reliability of AK-47 automatic rifle in grueling marathon negotiations of C-level company management and the bodies of state administration. I became the main point of contact on the intersection of the company management, architecture and engineering organizations, plant construction teams, logistics partners, and government authorities.
 
-I grew tremendously as a professional. But I started to feel that something was missing — this flow of events, though deep in scope and action, soon became shallow waters for me. The flow of new information ceased — I got this feeling crawling under my skin that I was running over and over the same circle — and finally I realized that I drastically need to expand the horizons, I became fully aware that I longed for a new course.
+I grew tremendously as a professional. But I started to feel that something was missing — this flow of events, though deep in scope and action, soon became shallow waters for me. The flow of new information ceased — I got this feeling crawling under my skin that I was running over and over the same circle — and finally I realized that I drastically needed to expand the horizons, I became fully aware that I longed for new knowledge.
 
 I didn't yet know which direction to move to, but as soon as admitted to myself a strong need for professional transition, the chance knocked on my door — I received a phone call from my first company's HR (they found my Resume somewhere on the Internet) with the proposition to try my luck in Tech Writing as by a happy coincidence they had this very position open.
 
@@ -24,7 +24,7 @@ Those days, the words "Technical Writing" for me were just a distant tiny dot on
 
 With the initial career school that I got through, I became a seasoned professional, I had plenty of invaluable experience in the art of communication, the ability to express my thoughts clearly, to gather relevant information, to prepare meticulously, and to withstand the grueling marathon negotiations without loosing focus.
 
-I was sure that having that base I could learn anything, I longed for knew knowledge, so I seized the chance and in one test assignment and team interview I found a new profession — the one that neven cease to expand its horizons and bring me joy.
+I was sure that having that base and the longing for new knowledge, I could reach anything, so I seized the chance and in one test assignment and team interview I found a new profession — the one that never ceases to expand its horizons and brings me lots of joy.
 
 Amen.
 
