@@ -4,20 +4,26 @@ description = "A short introduction."
 hideReadingTime = true
 +++
 
-## Tech Writing Journey
+## My Path
 
-A decade-long tech writing journey. Spark and curiosity. Hands-on across Developer Experience, Content Strategy, and Information Architecture. Gravitate toward Docs-as-Code tools and AI-augmented workflows. Specialize in API and developer docs, end-user docs, UX copy, website content, LLM- and Agent-ready docs, visual communication through diagrams and screenshots.
+It took me a decent number of years to become fully aware that I truly love the work that I do, that I have not only joined but utterly belong to the path that I've occasionally said "Yes" to many years ago. For me Tech Writing has become the ultimate playground where all the [strings of life that I cherish](/posts/hello-world) have intertwined and manifested themselves fully as an integral part of my profession.
 
-![About photo](/images/mosaic.jpg)
+What are those strings that I'm talking about? Oh, that's an easy one, here they come:
 
-Care for UX, both in docs and product interfaces. Spend endless hours with Design teams, advocating for straightforward logic and simplifying user interaction with complex systems.
+  * **From my interpreter's/translator's era**, I bring along the search for depth, the larger context behind everything, the fascination with the real meaning, the magic of reading between written lines and spoken words, and the art of unpacking the truth and transferring it into the right words.
 
-Set foot into aspects of the Tech Product Marketing Manager role, bringing insights into product vision to the Marketing team, grounded in deep understanding and articulated as clear product positioning and messaging. Craft feature announcement email send-outs communicating the essence of scheduled product releases to customers.
+  * **From my motorcycle life**, I apply to use the desire to roll up my sleeves and find out head-on how things really work under the hood. It taught me to have fun inspecting and understanding the tech that gets things going. It helped me find balance between the chase for excellence and particular scope of application. And in lots of ways my experience with motorcycles has shown me that you can breathe life into something inanimate and fell in love with your creation.
 
-Solid industry expertise: Blockchain / Web3 / DeFi, Fintech, Process Automation Solutions, Gaming/Publishing, and Telematics / GPS Fleet Management.
+  * **From my journey in martial arts**, I bring along the discipline, strategic thinking, and efficiency, the ability to continue moving forward firmly and steadily under pressure, to take hard shots and manage stress with a poker face and steady heart beat, the capacity for sober assessment of strengths and weaknesses, the willingness to take bold action, and the ability to flow freely with the current circumstances.
 
-## My Way
+  * And above all — the joy of writing...
 
-Operate best in environments that enable meaningful, strategic, product-aligned work. Believe in the freedom to shape and own the docs end-to-end: exploring product features hands-on, aligning with Product and Engineering teams, communicating complex systems with clarity and precision, and ensuring high-quality deliverables.
+And I happened to find out the hard way that there is no obstacle big enough that could ever avert me from this path. And believe me they tried: ...
 
-Among the first to raise questions and initiate constructive discussions when something feels off about the product. Easy to embed into Agile workflows across distributed teams with asynchronous communication. Curious, methodical, precise, diplomatic, and easy-going. Enjoy being around folks who love what they do.
+
+---
+
+## The Blog
+
+
+

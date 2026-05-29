@@ -8,4 +8,4 @@
 {{- if not (or $isFragment $isRemote $isSpecial) -}}
   {{- $href = strings.TrimPrefix "/" $destination | relURL -}}
 {{- end -}}
-<a href="{{ $href | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $isPDF }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Text | safeHTML }}</a>
+<a href="{{ $href | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $isPDF }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Text | safeHTML }}</a>{{- "" -}}

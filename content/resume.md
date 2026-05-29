@@ -32,7 +32,7 @@ Among the first to raise questions and initiate constructive discussions when so
 
 ## Tech and Tools
 
-Git, GitHub, Markdown, static site generators (Hugo, MkDocs, Docusaurus, Nextra, Fern), HTML/CSS, GitBook, Confluence, Jira, Figma, Snagit, OpenAPI/OpenRPC, YAML, JSON, Swagger, Postman, cURL, REST/RPC/gRPC APIs, Claude Code, Cursor, ChatGPT.
+Git, GitHub, Markdown, static site generators (Hugo, MkDocs, Docusaurus, Nextra, Fern), HTML/CSS, GitBook, Confluence, Jira, Figma, Snagit, OpenAPI/OpenRPC, YAML, JSON, Swagger, Postman, cURL, REST/RPC/gRPC APIs, Claude Code, Cursor, ChatGPT, Codex, GitHub Copilot.
 
 ---
 
