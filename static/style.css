@@ -193,3 +193,34 @@ html[data-theme="light-paper-purple"] {
 .menu__dropdown .theme-picker__item {
   margin-left: 0;
 }
+
+@media (max-width: 684px) {
+  .menu--desktop {
+    display: flex;
+  }
+
+  .menu--mobile {
+    display: none;
+  }
+
+  .navigation-menu {
+    margin: 20px 1px;
+  }
+
+  .navigation-menu__inner {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .navigation-menu__inner li {
+    padding: 0;
+  }
+
+  .navigation-menu__inner > .theme-picker__item {
+    margin-left: auto;
+  }
+
+  .theme-picker__label {
+    display: none;
+  }
+}
