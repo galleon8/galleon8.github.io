@@ -6,7 +6,7 @@ hideReadingTime = true
 
 ## My Path
 
-It took me a decent number of years to become fully aware that I truly love the work that I do, that I have not only joined but utterly belong to the path that I've occasionally said "Yes" to many years ago. For me Tech Writing has become the ultimate playground where all the [strings of life that I cherish](/posts/hello-world) have intertwined and manifested themselves fully as an integral part of my profession.
+It took me a decent number of years to become fully aware that I truly love the work that I do, that I have not only joined but utterly belong to the path that I've occasionally said "Yes" to many years ago. For me Tech Writing has become the ultimate playground where all the [strings of life that I cherish](/posts/first-one) have intertwined and manifested themselves fully as an integral part of my profession.
 
 What are those strings that I'm talking about? Oh, that's an easy one, here they come:
 
