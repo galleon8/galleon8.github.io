@@ -22,7 +22,7 @@ What are those strings that I'm talking about? Oh, that's an easy one, here they
 
 And the vital binding force that connects together all those parts of my life is the **joy of writing** — the joy of creating meaning out of chaos, of expressing my true self, of sharing my thoughts and ideas with others, and resonating with them through the power of language.
 
-The joy of writing is what keeps me going, what motivates me learning and improving, and what makes my work as a Tech Writer so fulfilling and rewarding.
+> The joy of writing is what keeps me going, what motivates me learning and improving, and what makes my work as a Tech Writer so fulfilling and rewarding.
 
 ---
 
@@ -32,6 +32,8 @@ I believe that to excel in anything you must continuously sharpen your skill in 
 
 Thus the purpose of the platform is to be the voice of my experiments along the way in Tech Writing. As I try out new approaches, explore modern concepts and tools, build the docs platforms equipped to the latest tech fashion, the platform will be the source of my systematized knowledge in particular domains.
 
-Right now, I'm targeting to cover the following spheres of interest on the intersection of Docs and Tech: **AI**, **Blockchain**, and **Quantum Computers**.
+Right now, I'm targeting to cover the following spheres of interest on the intersection of Docs and Tech:
+
+> **AI**, **Blockchain**, and **Quantum Computers**.
 
 

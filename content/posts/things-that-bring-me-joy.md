@@ -6,6 +6,10 @@ showFullContent = false
 readingTime = true
 +++
 
+## Intro
+
+> Soon enough, I've started to realize that I carry that search for depth over to everything I truly love doing in my path.
+
 ## Languages and Meaning
 
 I've never considered myself to be the brightest student in all the disciplines per se (some of them felt rather boring), but I could always find my passion and become fascinated with it, engaging fully, whatever it may be.
@@ -24,25 +28,11 @@ In live interpretation it's even more so — on top of everything already mentio
 
 **THAT** is the real magic behind the curtain. **THAT** depth of experience is where I've found my passion at, and that is what I've been and still am so fascinated with.
 
-> Soon enough, I've started to realize that I carry that search for depth over to everything I truly love doing in my path.
-
----
-
-## Logic
-
----
-
-## Aesthetics
-
----
-
-## Humor
-
 ---
 
 ## Martial Arts
 
-> "The force is with me and I am with the force. And I fear nothing for all this is as the force wills it."
+> "The force is with me and I am with the force. And I fear nothing for all this is as the force wills it." — Chirrut Îmwe, Rogue One: A Star Wars Story
 
 On my road in martial arts I don't even feel that I just walk it anymore — the lengths and depths we traveled together have made us a single inseparable unit, it flows through me freely and manifests itself in my thoughts and actions.
 
@@ -58,8 +48,5 @@ Boxing (and later kickboxing) is what I mean when talking martial arts. After ye
 
 ## Motorcycles
 
----
-
-## Technology
 
 
