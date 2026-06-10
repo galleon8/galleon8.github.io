@@ -12,7 +12,7 @@ A decade-long tech writing journey. Spark and curiosity. Hands-on across Develop
 
 > **Industry expertise**: Blockchain / Web3 / DeFi, Fintech, Process Automation Solutions, Gaming/Publishing, and Telematics / GPS Fleet Management.
 
-![About photo](/images/mosaic.jpg)
+![Resume mosaic](/images/mosaic.jpg)
 
 ## Beyond Docs
 
