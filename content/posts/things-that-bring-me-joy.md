@@ -8,7 +8,11 @@ readingTime = true
 
 ## Intro
 
-> Soon enough, I've started to realize that I carry that search for depth over to everything I truly love doing in my path.
+I don't believe in the world where people are merely looked at through the lens of functions they perform. I believe in the power of personality. I believe that each and every one of us bears the god's creative spark inside. And the paths we travel, the people we meet, the things that bring us joy are the means to kindle this spark and share its creative flames with those close to us.
+
+Here, I'm starting the series of stories that depict the world I live in, the paths I've taken, the joy it brings me, and my realizations on how all this interconnects with the career that I've chosen.
+
+Those stories don't have any particular order, you may jump to the one that resonates with you the most. And I hope that they will give you a better understanding of the person behind the craft, and maybe even inspire you to reflect on your own path and the things that bring you joy and kindle your inner spark.
 
 ## Languages and Meaning
 
@@ -32,7 +36,7 @@ In live interpretation it's even more so — on top of everything already mentio
 
 ## Martial Arts
 
-> "The force is with me and I am with the force. And I fear nothing for all this is as the force wills it." — Chirrut Îmwe, Rogue One: A Star Wars Story
+> "The force is with me and I am with the force. And I fear nothing for all this is as the force wills it." — *Chirrut Îmwe, Rogue One: A Star Wars Story*
 
 On my road in martial arts I don't even feel that I just walk it anymore — the lengths and depths we traveled together have made us a single inseparable unit, it flows through me freely and manifests itself in my thoughts and actions.
 
@@ -42,11 +46,28 @@ I've stepped into martial arts when I was a kid. I have to say that I was left w
 
 It seemed like a nightmare in the beginning — who do you think I met in the nearest local gym, ha-ha? — but soon I found that in spite of anything I was the most persistent, meticulous, and resistant one, and it turned into a blessing somewhere along the way. I've realized that if I can withstand this kind of fear and pressure without breaking and turning back, then I can achieve anything I apply myself to.
 
-Boxing (and later kickboxing) is what I mean when talking martial arts. After years in sports, the competition aspect of it became irrelevant for me, and I started to experience it as a way of life, a philosophy, a discipline that each and every day shows me the right way to live as a human being.
+Boxing (and later kickboxing and bjj) is what I mean when talking martial arts. After years in sports, the competition aspect of it became irrelevant for me, and I started to experience it as a way of life, a philosophy, a discipline that each and every day shows me the right way to live as a human being.
 
 ---
 
 ## Motorcycles
 
+> On this one I have to say thank you to my grandfather.
 
+That was him whom I, the little kid, first saw riding a bike and wearing those motorcycle attributes — a helmet and a leather jacket — that stuck in my mind for decades. That was him who read my admiration, revived the old scooter with his own hands, gave it to me as a present, and shared the knowing spark in the eyes after my first ride.
 
+And that first scooter ride on the village rural roads once and for all changed my perception of reality, left a deep imprint in my mind, and became my entry ticket into another world — the one with the wind in the face, the thrill of speed, the freedom of the open road, the excitement of adventure, and the joy of unity with the machine.
+
+### Moto and Tech Writing
+
+When the time came to buy my first vehicle, I had no slightest hesitation that it would be a motorcycle — life just made it happen. That time correlated with my first steps in Tech Writing. I had my struggles in the beginning, felt tremendous pressure transitioning into a new field, and experienced the imposter syndrome as I had no clear understanding of the required steps to advance in the new domain.
+
+And I didn't realize it at first, but the motorcycle became my secret weapon and silent teacher. All started with simple maintenance routines: you buy you first wrenching tools and start learning how to use them — you change the oil, adjust the chain, replace the brake pads.
+
+Step by step you gain confidence in what you do. You roll your sleeves up and get your hands dirty — inspect how things work under the hood, research the problem and find solutions to upgrade the system to particular application, and you have lots of fun doing it.
+
+### The Realization
+
+And then one day the pieces of the puzzle just fell into place — I suddenly realized that for quite a while I was applying the same approach to my new career without even noticing it — I was learning the Tech Writing craft head-on, getting my hands dirty, researching the problems, consulting with best practices, and finding solutions to particular challenges.
+
+Finally, I gained confidence in my abilities, found the right way to learn and grow in the new domain, and above all, found the way to have fun doing it.
