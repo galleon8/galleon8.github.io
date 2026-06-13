@@ -1,6 +1,6 @@
 baseURL = "https://galleon8.github.io/"
 locale = "en-US"
-title = "g8 blog"
+title = "galleon8"
 theme = "terminal"
 pagination.pagerSize = 5
 enableRobotsTXT = true
@@ -10,7 +10,7 @@ enableRobotsTXT = true
 
 [params]
   contentTypeName = "posts"
-  subtitle = "Notes, essays, and project updates."
+  subtitle = "Tech Writing | UX Writing | Docs Engineering"
   showMenuItems = 4
   showLanguageSelector = false
   fullWidthTheme = false
@@ -31,7 +31,7 @@ enableRobotsTXT = true
     label = "English"
 
     [languages.en.params]
-      subtitle = "Notes, essays, and project updates."
+      subtitle = "Tech Writing | UX Writing | Docs Engineering"
       menuMore = "Show more"
       readMore = "Read more"
       readOtherPosts = "Read other posts"
