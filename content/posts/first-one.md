@@ -1,14 +1,14 @@
 +++
 title = "Becoming a Tech Writer"
 date = 2026-04-30T00:00:00+03:00
-description = "About how I got into profession. What makes me do things the way I do. How that manifests in Tech Writing. And what's the deal with the blog."
+description = "About how I found my way into Tech Writing. My first steps, inner shifts, and realizations. What makes me do things the way I do. And how all that shaped the way I approach the craft."
 showFullContent = false
 readingTime = true
 +++
 
 ## First Steps
 
-It had been a couple of years since I graduated from a state linguistics university with the consecutive interpreting / technical translation diploma and English as my major, and started my career path right in the field of my specialization.
+It had been a couple of years since I graduated from a state linguistics university with a diploma in consecutive interpreting and technical translation, with English as my major, and started my career path right in the field of my specialization.
 
 Like with all the things I do, I started thoroughly and enthusiastically. I excelled in translation work — ran through innumerable pages (I could probably count those in kilos rather than pages) like a hot knife through butter — contracts, customs documentation, occupational safety regulations, proprietary manuals on heavy equipment operation and process technology, and whatnot.
 
