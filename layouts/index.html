@@ -1,0 +1,5 @@
+{{ define "main" }}
+  {{ $posts := .Site.GetPage "/posts" }}
+  {{ $paginator := .Paginate $posts.RegularPages }}
+  {{ partial "posts-landing.html" (dict "page" . "section" $posts "paginator" $paginator) }}
+{{ end }}

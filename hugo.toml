@@ -24,7 +24,7 @@ enableRobotsTXT = true
 
 [params.logo]
   logoText = "galleon8"
-  logoHomeLink = "/posts/"
+  logoHomeLink = "/"
 
 [languages]
   [languages.en]
@@ -38,7 +38,7 @@ enableRobotsTXT = true
 
       [languages.en.params.logo]
         logoText = "galleon8"
-        logoHomeLink = "/posts/"
+        logoHomeLink = "/"
 
 [menu]
   [[menu.main]]
@@ -50,7 +50,7 @@ enableRobotsTXT = true
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
-    url = "/posts/"
+    url = "/"
     weight = 20
 
   [[menu.main]]
