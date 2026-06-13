@@ -67,3 +67,7 @@ enableRobotsTXT = true
 
     [menu.main.params]
       newTab = true
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
