@@ -1,4 +1,4 @@
-baseURL = "https://galleon8.github.io/g8-blog/"
+baseURL = "https://galleon8.github.io/"
 locale = "en-US"
 title = "g8 blog"
 theme = "terminal"
@@ -23,8 +23,8 @@ enableRobotsTXT = true
   readOtherPosts = "Read other posts"
 
 [params.logo]
-  logoText = "g8 blog"
-  logoHomeLink = "/g8-blog/"
+  logoText = "galleon8"
+  logoHomeLink = "/posts/"
 
 [languages]
   [languages.en]
@@ -38,7 +38,7 @@ enableRobotsTXT = true
 
       [languages.en.params.logo]
         logoText = "galleon8"
-        logoHomeLink = "/g8-blog/"
+        logoHomeLink = "/posts/"
 
 [menu]
   [[menu.main]]
