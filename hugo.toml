@@ -11,6 +11,8 @@ enableRobotsTXT = true
 [params]
   contentTypeName = "posts"
   subtitle = "Tech Writing | UX Writing | Docs Engineering"
+  socialTitle = "galleon8 — Tech Writing & Docs Engineering"
+  socialDescription = "Complex systems in plain words | Docs-as-code | AI-ready knowledge"
   showMenuItems = 4
   showLanguageSelector = false
   fullWidthTheme = false
@@ -32,6 +34,8 @@ enableRobotsTXT = true
 
     [languages.en.params]
       subtitle = "Tech Writing | UX Writing | Docs Engineering"
+      socialTitle = "galleon8 — Tech Writing & Docs Engineering"
+      socialDescription = "Complex systems in plain words | Docs-as-code | AI-ready knowledge"
       menuMore = "Show more"
       readMore = "Read more"
       readOtherPosts = "Read other posts"

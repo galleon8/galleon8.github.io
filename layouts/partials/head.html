@@ -48,8 +48,19 @@
   {{ $socialImage = $pageCover | absURL }}
 {{ end }}
 
+{{ $socialTitle := .Title }}
+{{ $socialDescription := .Summary | plainify }}
+{{ if .IsHome }}
+  {{ $socialTitle = $.Site.Params.SocialTitle }}
+  {{ $socialDescription = $.Site.Params.SocialDescription }}
+{{ else if .Description }}
+  {{ $socialDescription = .Description | plainify }}
+{{ end }}
+
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ $socialTitle }}" />
+<meta name="twitter:description" content="{{ $socialDescription }}" />
 <meta name="twitter:image" content="{{ $socialImage }}" />
 {{ if (isset $.Site.Params "twitter") }}
   {{ if (isset $.Site.Params.Twitter "site") }}
@@ -61,8 +72,8 @@
 <!-- OG data -->
 <meta property="og:locale" content="{{ $.Site.Language.Lang }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
-<meta property="og:title" content="{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-<meta property="og:description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else if .Description}}{{ .Description | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta property="og:title" content="{{ $socialTitle }}">
+<meta property="og:description" content="{{ $socialDescription }}" />
 <meta property="og:url" content="{{ $canonicalURL }}" />
 <meta property="og:site_name" content="{{ $.Site.Title }}" />
 <meta property="og:image" content="{{ $socialImage }}">
