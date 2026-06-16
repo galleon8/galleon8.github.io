@@ -132,6 +132,12 @@ html[data-theme="light-paper-purple"] {
   flex-direction: column;
   gap: 0.35rem;
   text-align: center;
+  width: 100%;
+}
+
+.footer .site-footer__copy span {
+  max-width: 100%;
+  white-space: normal;
 }
 
 .theme-picker {
@@ -222,5 +228,10 @@ html[data-theme="light-paper-purple"] {
 
   .theme-picker__label {
     display: none;
+  }
+
+  .site-footer__copy {
+    gap: 0.45rem;
+    line-height: 1.35;
   }
 }

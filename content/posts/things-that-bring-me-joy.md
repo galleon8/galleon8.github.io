@@ -1,6 +1,6 @@
 +++
 title = "Things That Bring Me Joy: Part One"
-date = 2026-05-29T00:00:00+03:00
+date = 2026-06-16T00:00:00+03:00
 description = "About myself through the things that bring me joy. The paths I've taken towards being me. My realizations along the way. And the strings of life that keep my inner spark alive."
 showFullContent = false
 readingTime = true

@@ -22,6 +22,7 @@
 
 <div class="posts">
   {{ range $paginator.Pages }}
+    {{ $showReadingTime := and (.Param "readingTime") (eq (.Param "readingTime") true) (not (.Param "hideReadingTime")) }}
     <article class="post on-list">
       <h2 class="post-title">
         <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
@@ -34,6 +35,9 @@
         {{- end -}}
         {{- with .Params.Author -}}
           <span class="post-author">{{- . -}}</span>
+        {{- end -}}
+        {{- if $showReadingTime -}}
+          <span class="post-reading-time">{{ .ReadingTime }} {{ $.Site.Params.minuteReadingTime | default "min read" }} ({{ .WordCount }} {{ $.Site.Params.words | default "words" }})</span>
         {{- end -}}
       </div>
 

@@ -13,6 +13,7 @@ enableRobotsTXT = true
   subtitle = "Tech Writing | UX Writing | Docs Engineering"
   socialTitle = "Tech Writing | UX Writing | Docs Engineering"
   socialDescription = "Complex systems in plain words | Docs-as-code | AI-ready knowledge"
+  dateFormat = "Jan 2, 2006"
   showMenuItems = 4
   showLanguageSelector = false
   fullWidthTheme = false

@@ -1,6 +1,6 @@
 +++
 title = "Becoming a Tech Writer"
-date = 2026-04-30T00:00:00+03:00
+date = 2026-06-12T00:00:00+03:00
 description = "About how I found my way into Tech Writing. My first steps, inner shifts, and realizations. What makes me do things the way I do. And how all that shaped the way I approach the craft."
 showFullContent = false
 readingTime = true
