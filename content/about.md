@@ -10,7 +10,7 @@ It took me a decent number of years to become fully aware that I truly love the 
 
 For me, Tech Writing has become the ultimate playground where all the strings of life that I cherish have intertwined and manifested themselves fully as an integral part of my profession.
 
-![About mosaic](/images/prometheus.png)
+![About mosaic](/images/prometheus.webp)
 
 What are those strings that I'm talking about? Oh, that's an easy one, here they come:
 
